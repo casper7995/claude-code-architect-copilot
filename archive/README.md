@@ -1,30 +1,43 @@
 # Archive
 
-This directory contains legacy files from the initial project design that are no longer used in the official Claude Code plugin system.
+This directory contains legacy files from development phases that have been replaced by the official Claude Code plugin structure.
 
-## Legacy Files
+## Contents
 
-### .clinerules-* Files
-These were part of an early "mode system" concept (architect, code, test, debug, ask modes).
+### Legacy Mode Files (`.clinerules-*`)
+- `.clinerules-architect` - Architecture mode configuration
+- `.clinerules-code` - Code mode configuration
+- `.clinerules-test` - Test mode configuration
+- `.clinerules-debug` - Debug mode configuration
+- `.clinerules-ask` - Ask mode configuration
 
-**Why archived:**
-- Claude Code plugins use agents, not modes
-- Agent activation is handled by descriptions in frontmatter
-- Mode switching is implicit based on agent activation
+**Reason for archival:** Claude Code plugins use agent descriptions with keywords for activation, not mode-based configuration files.
 
-### hooks/ Directory
-JSON-based hook definitions for triggering agents.
+### Legacy Hook Files (`hooks/*.json`)
+- `hooks/memory-hooks.json` - Memory agent hook configuration
+- `hooks/databricks-hooks.json` - Databricks agent hook configuration
 
-**Why archived:**
-- Claude Code handles agent activation through agent descriptions
-- Keywords, file patterns, and context cues go in agent frontmatter
-- No separate JSON hook files needed
+**Reason for archival:** Hooks execute shell commands at lifecycle events (PreToolUse, PostToolUse), not agent activation. Agent activation is handled by descriptions with keywords in agent frontmatter.
+
+### Development History Files (`.txt`)
+- `claude_code_architect_copilot.txt` - Initial conversation log
+- `claude_code_architect_copilot_update.txt` - Restructuring conversation log
+- `claude_code_architect_copilot_best_practices_update.txt` - Best practices update log
+
+**Reason for archival:** Historical context for development process, not needed for plugin functionality.
+
+### Cipher Database (`data/`)
+- `cipher-sessions.db` - Cipher MCP session database from development
+- Database files (`.db-shm`, `.db-wal`) - SQLite temporary files
+
+**Reason for archival:** Development database, users will have their own Cipher data when using the plugin.
 
 ## Current System
 
 The project now uses the official Claude Code plugin format:
 - Agents defined as `.md` files with YAML frontmatter
-- Agent activation via `description` field
+- Agent activation via `description` field with keywords
 - Plugin bundles defined in `.claude-plugin/marketplace.json`
+- MCP tools declared in agent frontmatter `tools:` field
 
 See the main [README.md](../README.md) for current documentation.
