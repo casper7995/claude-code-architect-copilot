@@ -22,19 +22,17 @@ All agents use **Sonnet 4.5** for fast, cost-effective, and high-quality assista
 
 ## 📦 Installation
 
-### Quick Install
+### One-Command Install
 
-Install all 12 agents with a single command:
+In Claude Code, run:
 
 ```bash
-/plugin install claude-code-architect-copilot@casper7995/claude-code-architect-copilot
+/plugin add https://github.com/casper7995/claude-code-architect-copilot
 ```
 
-Then **restart Claude Code** to activate.
+Then **restart Claude Code** to activate all 12 agents.
 
-### Manual Installation
-
-If the plugin command doesn't work:
+### Manual Install (Alternative)
 
 ```bash
 git clone https://github.com/casper7995/claude-code-architect-copilot.git
