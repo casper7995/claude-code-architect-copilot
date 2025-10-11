@@ -25,5 +25,6 @@
     "memory-bank",
     "context-aware",
     "intelligent-storage"
-  ]
+  ],
+  "agents": "./agents/"
 }

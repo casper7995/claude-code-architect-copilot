@@ -22,143 +22,91 @@ All agents use **Sonnet 4.5** for fast, cost-effective, and high-quality assista
 
 ## 📦 Installation
 
-Add this marketplace to Claude Code:
+### Quick Install
+
+Install all 12 agents with a single command:
 
 ```bash
-/plugin marketplace add https://github.com/casper7995/claude-code-architect-copilot
+/plugin install claude-code-architect-copilot@casper7995/claude-code-architect-copilot
 ```
 
-Browse and install plugins:
+Then **restart Claude Code** to activate.
+
+### Manual Installation
+
+If the plugin command doesn't work:
 
 ```bash
-/plugin
+git clone https://github.com/casper7995/claude-code-architect-copilot.git
+cd claude-code-architect-copilot
+mkdir -p ~/.claude/agents
+cp agents/*.md ~/.claude/agents/
+cp agents/adopted/*.md ~/.claude/agents/
 ```
 
-## 🚀 Available Plugins
+Then restart Claude Code.
 
-### 1. Architect Copilot Essentials
+**[→ See detailed installation guide](INSTALL.md)**
 
-**Essential agents for architecture-first development**
+### ⚠️ MCP Servers Required
 
-```bash
-/plugin install architect-copilot-essentials
-```
+The plugin installs **agents only**. For full functionality, you also need:
+- **memorybank** - Memory Agent storage
+- **context7** - Best Practices documentation lookup
+- **cipher** - Semantic memory (optional)
 
-**Includes:**
-- **Memory Agent** - Intelligent storage to Memory Bank and Cipher
+[See MCP installation guide in INSTALL.md](INSTALL.md#required-mcp-servers-separate-installation)
+
+## 🚀 What's Included
+
+Installing this plugin gives you **12 specialized agents** that activate automatically:
+
+### 🧠 Core Intelligence Agents (4)
+- **Memory Agent** - Smart storage to Memory Bank & Cipher
 - **Best Practices Agent** - Documentation lookup via Context7
-- **Documentation Agent** - Technical writing and doc generation
-- **Sequential Thinking Agent** - Complex problem-solving with structured reasoning
+- **Documentation Agent** - Technical writing and generation
+- **Sequential Thinking Agent** - Complex problem-solving
 
-**Use when:**
-- Starting new projects
-- Making architectural decisions
-- Need to maintain context across sessions
-- Looking up best practices and current documentation
+### ⚡ Domain Expert Agents (3)
+- **Databricks Agent** - Unity Catalog, Delta Lake, DLT, Spark, MLflow
+- **GenAI Agent** - RAG systems, vector search, LLM applications
+- **ML Agent** - ML pipelines, feature engineering, model deployment
 
----
+### 🔧 Specialist Agents (5)
+- **Data Scientist** - SQL, exploratory analysis, statistical insights
+- **Code Reviewer** - Security-focused code analysis
+- **Docs Architect** - Long-form technical documentation
+- **Deployment Engineer** - CI/CD, Kubernetes, cloud deployment
+- **Security Auditor** - OWASP, SOC2, HIPAA compliance
 
-### 2. Databricks Development Suite
+### 🎯 Key Features
 
-**Complete Databricks platform expertise**
-
-```bash
-/plugin install databricks-development-suite
-```
-
-**Includes:**
-- **Databricks Agent** (Opus) - Unity Catalog, Delta Lake, DLT expert
-- **Data Scientist** - SQL, BigQuery, exploratory analysis
-- **Best Practices Agent** - Databricks documentation access
-
-**Features:**
-- Unity Catalog governance and design
-- Delta Lake MERGE operations and optimization
-- Delta Live Tables (DLT) pipeline patterns
-- Spark performance tuning
-- MLflow integration
-- Bronze/Silver/Gold layer architecture
-
-**Keywords:** databricks, unity catalog, delta lake, dlt, spark, mlflow, merge, optimize, vacuum
-
----
-
-### 3. GenAI & ML Toolkit
-
-**Machine learning and GenAI development**
-
-```bash
-/plugin install genai-ml-toolkit
-```
-
-**Includes:**
-- **GenAI Agent** (Opus) - RAG systems, vector search, LLM apps
-- **ML Agent** (Opus) - ML pipelines, MLflow, feature engineering
-- **AI Engineer** - LLM integration, agent frameworks
-- **ML Engineer** - Production ML infrastructure
-- **Databricks Agent** - ML on Databricks platform
-
-**Features:**
-- RAG system implementation
-- Vector search with Databricks Vector Search
-- LLM application development
-- MLflow experiment tracking
-- Feature store management
-- Model serving and deployment
-
-**Keywords:** rag, llm, vector search, embeddings, mlflow, feature store, model training
-
----
-
-### 4. Memory Intelligence
-
-**Context-aware development with persistent memory**
-
-```bash
-/plugin install memory-intelligence
-```
-
-**Includes:**
-- **Memory Agent** - Smart storage orchestration
-- **Sequential Thinking Agent** - Complex reasoning
-
-**Features:**
-- Automatic storage of significant insights
-- Semantic memory with Cipher MCP
-- Structured context with Memory Bank MCP
-- Decision logging and progress tracking
+**Memory & Context:**
 - Cross-session knowledge retention
+- Automatic decision logging
+- Progress tracking
+- Semantic memory with embeddings
 
-**Use when:**
-- User says "remember this" or "store this"
-- After significant architecture discussions
-- Making technology choices
-- Discovering non-obvious solutions
+**Databricks Expertise:**
+- Unity Catalog governance
+- Delta Lake MERGE operations
+- Delta Live Tables (DLT) patterns
+- Spark optimization
+- MLflow integration
+- Bronze/Silver/Gold architecture
 
----
+**GenAI & ML:**
+- RAG implementation
+- Vector search integration
+- Feature store management
+- Model serving & deployment
+- Experiment tracking
 
-### 5. Architecture Design System
-
-**Comprehensive system design and review**
-
-```bash
-/plugin install architecture-design-system
-```
-
-**Includes:**
-- **Code Reviewer** (Opus) - Security-focused code review
-- **Docs Architect** (Opus) - Technical documentation generation
-- **Deployment Engineer** - CI/CD and cloud deployment
-- **Security Auditor** (Opus) - OWASP compliance and vulnerability assessment
-- **Sequential Thinking Agent** - Complex design decisions
-- **Documentation Agent** - Technical writing
-
-**Features:**
-- Multi-perspective code analysis
-- Security and compliance auditing
-- Architecture documentation
-- Deployment planning
-- Technical leadership guidance
+**Security & Quality:**
+- SAST/DAST analysis
+- Vulnerability detection
+- Compliance auditing
+- Multi-perspective code review
 
 ---
 
