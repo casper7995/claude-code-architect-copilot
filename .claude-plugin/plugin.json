@@ -26,5 +26,18 @@
     "context-aware",
     "intelligent-storage"
   ],
-  "agents": "./agents/"
+  "agents": [
+    "./agents/memory-agent.md",
+    "./agents/best-practices-agent.md",
+    "./agents/documentation-agent.md",
+    "./agents/sequential-thinking-agent.md",
+    "./agents/databricks-agent.md",
+    "./agents/genai-agent.md",
+    "./agents/ml-agent.md",
+    "./agents/adopted/data-scientist.md",
+    "./agents/adopted/code-reviewer.md",
+    "./agents/adopted/docs-architect.md",
+    "./agents/adopted/deployment-engineer.md",
+    "./agents/adopted/security-auditor.md"
+  ]
 }
