@@ -22,22 +22,30 @@ All agents use **Sonnet 4.5** for fast, cost-effective, and high-quality assista
 
 ## 📦 Installation
 
-Clone and install all 12 agents:
+### Add the Marketplace
 
-```bash
-git clone https://github.com/casper7995/claude-code-architect-copilot.git
-cd claude-code-architect-copilot
-mkdir -p ~/.claude/agents
-cp agents/*.md ~/.claude/agents/
-cp agents/adopted/*.md ~/.claude/agents/
+In Claude Code, run:
+
 ```
+/plugin marketplace add casper7995/claude-code-architect-copilot
+```
+
+### Install the Plugin
+
+Then browse and install:
+
+```
+/plugin
+```
+
+Select **architect-copilot-essentials** from the marketplace.
 
 **Restart Claude Code** to activate all agents.
 
 ### Verification
 
 After restarting, verify installation:
-```bash
+```
 /subagent
 ```
 
@@ -193,6 +201,7 @@ Agents work together automatically:
 claude-code-architect-copilot/
 ├── .claude-plugin/
 │   └── marketplace.json       # Plugin catalog
+├── plugin.json                # Plugin manifest
 ├── agents/
 │   ├── memory-agent.md        # Smart storage orchestration
 │   ├── databricks-agent.md    # Databricks platform expert
@@ -202,23 +211,23 @@ claude-code-architect-copilot/
 │   ├── documentation-agent.md
 │   ├── sequential-thinking-agent.md
 │   └── adopted/               # Community agents
-│       ├── ai-engineer.md
-│       ├── ml-engineer.md
 │       ├── code-reviewer.md
 │       ├── data-scientist.md
 │       ├── docs-architect.md
 │       ├── deployment-engineer.md
 │       └── security-auditor.md
-├── workflows/                  # (Future) Multi-agent workflows
-├── tools/                      # (Future) Focused utilities
-├── examples/                   # Usage examples
-└── memory-bank/               # Project memory storage
-    ├── product-context.md
-    ├── active-context.md
-    ├── system-patterns.md
-    ├── decision-log.md
-    └── progress.md
+├── archive/                   # Archived documentation
+├── memory-bank/               # Example structure (user-specific, not distributed)
+│   ├── product-context.md
+│   ├── active-context.md
+│   ├── system-patterns.md
+│   ├── decision-log.md
+│   └── progress.md
+├── README.md
+└── LICENSE
 ```
+
+> **Note:** The `memory-bank/` directory shown here is an example structure for reference. Each user will have their own Memory Bank managed by the Memory Bank MCP server in their local environment.
 
 ## 🔧 Configuration
 
