@@ -1,7 +1,7 @@
 {
   "name": "claude-code-architect-copilot",
   "tagline": "Architecture-first AI development copilot with intelligent memory and specialized domain expertise",
-  "description": "Claude Code plugin marketplace featuring 12 specialized agents powered by Sonnet 4.5. Includes Memory Bank integration for cross-session context, Databricks/Unity Catalog expertise, GenAI/ML workflows, and security-focused code review. Agents activate automatically via keywords and file patterns for seamless, proactive assistance.",
+  "description": "Claude Code plugin with 12 specialized agents powered by Sonnet 4.5. Includes Memory Bank integration for cross-session context, Databricks/Unity Catalog expertise, GenAI/ML workflows, and security-focused code review. Agents activate automatically via keywords and file patterns for seamless, proactive assistance.",
   "version": "1.0.0",
   "author": {
     "name": "Casper",
