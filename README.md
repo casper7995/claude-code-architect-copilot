@@ -22,36 +22,61 @@ All agents use **Sonnet 4.5** for fast, cost-effective, and high-quality assista
 
 ## 📦 Installation
 
-### Add the Marketplace
+### Method 1: Direct Installation (Works Now - Both CLI & VS Code)
+
+Clone and copy agents to your Claude directory:
+
+```bash
+git clone https://github.com/casper7995/claude-code-architect-copilot.git
+cd claude-code-architect-copilot
+mkdir -p ~/.claude/agents
+cp agents/*.md ~/.claude/agents/
+cp agents/adopted/*.md ~/.claude/agents/
+```
+
+**Then restart:**
+- **CLI:** Close and reopen terminal
+- **VS Code:** Reload window (Cmd+Shift+P → "Developer: Reload Window")
+
+### Method 2: Plugin Marketplace (Coming in v2.1.0+)
 
 In Claude Code, run:
 
 ```
 /plugin marketplace add casper7995/claude-code-architect-copilot
+/plugin install architect-copilot-essentials
 ```
 
-### Install the Plugin
-
-Then browse and install:
-
-```
-/plugin
-```
-
-Select **architect-copilot-essentials** from the marketplace.
-
-**Restart Claude Code** to activate all agents.
+> **Note:** Plugin marketplace announced Oct 9, 2025. Awaiting stable release (v2.1.0+).  
+> Direct installation works in both CLI and VS Code extension now.
 
 ### Verification
 
-After restarting, verify installation:
-```
-/subagent
-```
+**CLI:** Agents activate automatically based on keywords in your conversation  
+**VS Code:** Same - agents work in the sidebar chat interface
 
-You should see all 12 agents listed.
+Test by asking:
+- "Design a Unity Catalog structure" → Databricks Agent activates
+- "Review this code for security" → Code Reviewer activates
+- "Remember this pattern" → Memory Agent activates
 
 **[→ See detailed installation guide](INSTALL.md)**
+
+### 🎨 Works in Both CLI & VS Code
+
+This plugin works seamlessly in:
+
+**Terminal (CLI)**
+```bash
+claude
+# Agents activate automatically
+```
+
+**VS Code Extension**
+1. Install [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)
+2. Requires VS Code 1.98.0+
+3. Agents load from same `~/.claude/agents/` directory
+4. Access via sidebar panel
 
 ### ⚠️ MCP Servers Required
 
