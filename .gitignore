@@ -9,6 +9,15 @@ CLAUDE_MD*.md
 *CLAUDE.md
 PLUGIN_INSTALLATION_GUIDE.md
 
+# Cline configuration files (personal)
+.clinerules-*
+
+# Personal Claude directory
+.claude/
+
+# Temporary/development scripts
+install.sh
+
 # macOS
 .DS_Store
 .AppleDouble
