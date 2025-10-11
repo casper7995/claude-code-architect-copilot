@@ -1,0 +1,16 @@
+This is a Claude Code plugin system that extends Claude Code with specialized AI agents. The architecture consists of:
+
+1. Five operational modes via .clinerules files (architect, code, test, debug, ask)
+2. Seven specialized agents: Memory Agent (smart storage to Memory Bank + Cipher), Best Practices Agent, Sequential Thinking Agent, Databricks Agent (Unity Catalog/Delta Lake expert), GenAI Agent (RAG/vector search), ML Agent (MLflow), Documentation Agent
+3. Seven adopted pre-built agents for various roles
+4. Hooks system for automatic agent triggering based on keywords, file patterns, and context
+5. Memory Bank integration with UMB command for structured storage
+6. Cipher integration for semantic memory retrieval
+
+Key patterns:
+- Memory Agent uses intelligent heuristics to avoid storing everything - only significant insights
+- Databricks Agent is expert in Unity Catalog, Delta Lake, DLT, and leverages Databricks MCPs
+- Agents collaborate via mode handoff triggers
+- Architect mode is limited to markdown files unless UMB command temporarily overrides
+
+The system integrates multiple MCP servers: Memory Bank, Cipher, Context7, Databricks Functions, Databricks Vector Search, Sequential Thinking, and Fetch.

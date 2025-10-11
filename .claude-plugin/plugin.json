@@ -1,0 +1,29 @@
+{
+  "name": "claude-code-architect-copilot",
+  "tagline": "Architecture-first AI development copilot with intelligent memory and specialized domain expertise",
+  "description": "Claude Code plugin marketplace featuring 12 specialized agents powered by Sonnet 4.5. Includes Memory Bank integration for cross-session context, Databricks/Unity Catalog expertise, GenAI/ML workflows, and security-focused code review. Agents activate automatically via keywords and file patterns for seamless, proactive assistance.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Casper",
+    "email": "casper@example.com",
+    "url": "https://github.com/casper7995"
+  },
+  "homepage": "https://github.com/casper7995/claude-code-architect-copilot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/casper7995/claude-code-architect-copilot.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugins",
+    "agents",
+    "architecture",
+    "databricks",
+    "machine-learning",
+    "genai",
+    "memory-bank",
+    "context-aware",
+    "intelligent-storage"
+  ]
+}
