@@ -4,6 +4,11 @@ memory-bank/
 # Data files (user-specific databases)
 data/
 
+# CLAUDE.md files (personal user instructions)
+CLAUDE_MD*.md
+*CLAUDE.md
+PLUGIN_INSTALLATION_GUIDE.md
+
 # macOS
 .DS_Store
 .AppleDouble
