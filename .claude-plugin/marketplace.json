@@ -1,13 +1,12 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-code-architect-copilot",
+  "version": "1.0.0",
+  "description": "Intelligent agent system with Memory Bank integration, Databricks expertise, and specialized AI/ML workflows for architecture-first development",
   "owner": {
     "name": "Casper",
     "email": "casper@example.com",
     "url": "https://github.com/casper7995"
-  },
-  "metadata": {
-    "description": "Intelligent agent system with Memory Bank integration, Databricks expertise, and specialized AI/ML workflows for architecture-first development",
-    "version": "1.0.0"
   },
   "plugins": [
     {
