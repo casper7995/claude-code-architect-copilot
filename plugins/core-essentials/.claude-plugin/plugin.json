@@ -1,17 +1,10 @@
 {
   "name": "core-essentials",
+  "version": "1.0.0",
   "tagline": "Core agents for architecture-first development",
   "description": "Essential agents: Memory Bank integration, Context7 best practices lookup, automatic documentation generation, and structured reasoning for complex decisions.",
-  "version": "1.0.0",
   "author": {
     "name": "Casper",
     "url": "https://github.com/casper7995"
-  },
-  "agents": [
-    "../../agents/memory-agent.md",
-    "../../agents/best-practices-agent.md",
-    "../../agents/documentation-agent.md",
-    "../../agents/sequential-thinking-agent.md"
-  ]
+  }
 }
-
