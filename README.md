@@ -38,7 +38,7 @@ cp agents/adopted/*.md ~/.claude/agents/
 - **CLI:** Close and reopen terminal
 - **VS Code:** Reload window (Cmd+Shift+P → "Developer: Reload Window")
 
-### Method 2: Plugin Marketplace (Coming in v2.1.0+)
+### Method 2: Plugin Marketplace (Coming Soon)
 
 In Claude Code, run:
 
@@ -47,7 +47,7 @@ In Claude Code, run:
 /plugin install architect-copilot-essentials
 ```
 
-> **Note:** Plugin marketplace announced Oct 9, 2025. Awaiting stable release (v2.1.0+).  
+> **Note:** Plugin marketplace announced Oct 9, 2025 in public beta. Not yet available in current stable release (v2.0.14). Check for updates: `claude update`  
 > Direct installation works in both CLI and VS Code extension now.
 
 ### Verification

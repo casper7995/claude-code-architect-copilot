@@ -1,8 +1,8 @@
 # Installation Guide
 
-## Current Installation (v2.0.14)
+## Current Installation (Direct Method)
 
-> **Note:** The `/plugin marketplace` commands are coming in Claude Code v2.1.0+. For now, use direct installation.
+> **Note:** The `/plugin marketplace` commands were announced Oct 9, 2025 but are not yet in the current stable release. For now, use direct installation below.
 
 ### Step-by-Step Installation
 
@@ -73,7 +73,7 @@ ls -1 ~/.claude/agents/*.md | wc -l
 
 ---
 
-## Future Installation (v2.1.0+)
+## Future Installation (When Marketplace is Released)
 
 Once plugin marketplace support is released, you'll be able to use the official installation method:
 
