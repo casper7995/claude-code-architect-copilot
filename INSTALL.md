@@ -150,14 +150,23 @@ Without MCP servers, some agents will have limited functionality:
 | **context7** | Library documentation lookup | `@upstash/context7-mcp` | Best Practices Agent |
 | **cipher** | Semantic memory search | `@byterover/cipher` | Memory Agent |
 
-### Optional MCP Servers (For Specific Use Cases)
+### Recommended MCP Servers (For Specific Use Cases)
+
+| Server | Purpose | Package | Use Case |
+|--------|---------|---------|----------|
+| **sequential-thinking** | Structured reasoning | `@modelcontextprotocol/server-sequential-thinking` | Sequential Thinking Agent, complex analysis |
+| **sqlite** | SQLite database queries | `@modelcontextprotocol/server-sqlite` | Data analysis, local databases |
+| **postgres** | PostgreSQL operations | `@modelcontextprotocol/server-postgres` | Production databases, data work |
+| **brave-search** | Real-time web search | `@modelcontextprotocol/server-brave-search` | Current info, documentation lookups |
+| **filesystem** | File operations | `@modelcontextprotocol/server-filesystem` | File reading/writing (usually auto-included) |
+| **github** | GitHub integration | GitHub Copilot MCP | Repos, PRs, issues (usually auto-included) |
+
+### Databricks-Specific MCP Servers (Optional)
 
 | Server | Purpose | Package | Required For |
 |--------|---------|---------|--------------|
 | **databricks-functions** | Unity Catalog operations | `@databricks/mcp-server-functions` | Databricks Agent |
 | **databricks-vector-search** | Vector similarity search | `@databricks/mcp-server-vector-search` | GenAI Agent |
-| **serena** | Code intelligence & analysis | `git+https://github.com/oraios/serena` | Code Reviewer |
-| **sequential-thinking** | Structured reasoning | `@modelcontextprotocol/server-sequential-thinking` | Sequential Thinking Agent |
 
 ### How to Install MCP Servers
 
@@ -171,9 +180,14 @@ claude mcp add memorybank npx -y @movibe/memory-bank-mcp --mode code
 claude mcp add context7 npx -y @upstash/context7-mcp
 claude mcp add cipher npx -y @byterover/cipher --mode mcp
 
-# Add optional servers
-claude mcp add databricks-functions npx -y @databricks/mcp-server-functions
+# Add recommended servers (choose based on your needs)
 claude mcp add sequential-thinking npx -y @modelcontextprotocol/server-sequential-thinking
+claude mcp add sqlite npx -y @modelcontextprotocol/server-sqlite --db-path /path/to/your/database.db
+claude mcp add postgres npx -y @modelcontextprotocol/server-postgres postgresql://user:password@localhost/dbname
+claude mcp add brave-search npx -y @modelcontextprotocol/server-brave-search
+
+# Add Databricks-specific servers (if you use Databricks)
+claude mcp add databricks-functions npx -y @databricks/mcp-server-functions
 
 # Verify installation
 claude mcp list
