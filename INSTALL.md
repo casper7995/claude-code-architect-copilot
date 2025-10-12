@@ -75,14 +75,56 @@ ls -1 ~/.claude/agents/*.md | wc -l
 
 ## Future Installation (v2.1.0+)
 
-Once plugin marketplace support is released, you'll be able to install with:
+Once plugin marketplace support is released, you'll be able to use the official installation method:
+
+### Step 1: Add the Marketplace
+
+In Claude Code, run:
 
 ```bash
 /plugin marketplace add casper7995/claude-code-architect-copilot
+```
+
+This adds the marketplace to your available plugin sources.
+
+### Step 2: Browse Available Plugins
+
+```bash
+/plugin
+```
+
+This opens the plugin menu where you can see all available plugins from added marketplaces.
+
+### Step 3: Install the Plugin
+
+Select and install from the menu, or directly:
+
+```bash
 /plugin install architect-copilot-essentials
 ```
 
+Then **restart Claude Code** to activate all agents.
+
+---
+
+### Available Plugin Bundles
+
+When marketplace is available, you can install individual bundles:
+
+| Bundle | Agents Included | Use Case |
+|--------|----------------|----------|
+| **architect-copilot-essentials** | All 12 agents | Complete setup (recommended) |
+| **databricks-development-suite** | Databricks, Data Scientist, ML | Data platform work |
+| **genai-ml-toolkit** | GenAI, ML, AI Engineer | AI/ML development |
+| **memory-intelligence** | Memory, Best Practices | Context management |
+| **architecture-design-system** | Code Reviewer, Security Auditor, Docs | Architecture & security |
+
+---
+
+### Plugin Validation Status
+
 Your plugin is **already validated and ready** for marketplace distribution:
+
 ```bash
 cd claude-code-architect-copilot
 claude plugin validate .
