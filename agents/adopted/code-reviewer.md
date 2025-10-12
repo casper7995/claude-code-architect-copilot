@@ -2,7 +2,7 @@
 name: code-reviewer
 description: Expert code reviewer specializing in security-focused analysis and production reliability. Use PROACTIVELY when reviewing code for security vulnerabilities, assessing production readiness, evaluating code quality, or performing comprehensive code audits. Applies industry best practices and identifies subtle bugs. Keywords - code review, review this, security check, production ready, code quality, code audit, security vulnerabilities, best practices.
 model: sonnet
-tools: mcp__serena__find_symbol, mcp__serena__find_referencing_symbols, mcp__serena__search_for_pattern, mcp__context7__get-library-docs, mcp__fetch__fetch
+tools: mcp__context7__get-library-docs, mcp__fetch__fetch
 ---
 
 # Code Reviewer (Adopted from wshobson/agents)
@@ -32,7 +32,6 @@ Master code reviewer focused on code quality, security, performance, and maintai
 
 ## Integration with Custom Agents
 - **Aggressive PostToolUse hook** - Auto-triggers after Edit/Write
-- **Serena MCP**: Semantic code navigation and analysis
 - **BestPracticesAgent**: Best practice validation
 - **Sequential-Thinking**: Complex code review decisions
 - **MemoryAgent**: Stores code patterns and anti-patterns
@@ -52,7 +51,6 @@ Master code reviewer focused on code quality, security, performance, and maintai
 - Knowledge transfer focus
 
 ## MCP Tools
-- Serena (semantic code analysis)
 - Context7 (language/framework best practices)
 - Fetch (security advisory lookups)
 

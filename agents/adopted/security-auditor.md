@@ -2,7 +2,7 @@
 name: security-auditor
 description: Expert in security audits, vulnerability assessments, and compliance. Use PROACTIVELY for comprehensive security audits, OWASP Top 10 vulnerability checks, penetration testing, compliance validation (SOC2, HIPAA, GDPR), or security hardening. Identifies security vulnerabilities before they become issues. Keywords - security audit, vulnerability, owasp, penetration test, security scan, compliance, security hardening, soc2, hipaa, gdpr.
 model: sonnet
-tools: mcp__serena__search_for_pattern, mcp__serena__find_symbol, mcp__context7__get-library-docs, mcp__fetch__fetch
+tools: mcp__context7__get-library-docs, mcp__fetch__fetch
 ---
 
 
@@ -63,7 +63,6 @@ Comprehensive security assessment specialist focusing on vulnerability detection
 ## MCP Tools
 - Context7 (security framework docs, OWASP)
 - Fetch (CVE databases, security advisories)
-- Serena (code vulnerability analysis)
 
 ---
 
