@@ -30,7 +30,7 @@ In Claude Code, use the `/plugin` TUI to add and install:
    ```
    /plugin
    → Select "Add Marketplace"
-   → Enter: casper7995/claude-code-architect-copilot
+   → Enter: https://github.com/casper7995/claude-code-architect-copilot
    ```
 
 2. **Install plugins (choose what you need):**
