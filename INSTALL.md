@@ -1,10 +1,44 @@
 # Installation Guide
 
-## Current Installation (Direct Method)
+## Recommended: Marketplace Installation
 
-> **Note:** The `/plugin marketplace` commands were announced Oct 9, 2025 but are not yet in the current stable release. For now, use direct installation below.
+### Step 1: Add Marketplace via TUI
 
-### Step-by-Step Installation
+In Claude Code, run `/plugin` and use the TUI:
+
+```
+/plugin
+→ Select "Add Marketplace"
+→ Enter: casper7995/claude-code-architect-copilot
+```
+
+### Step 2: Install Plugin
+
+```
+/plugin
+→ Select "claude-code-architect-copilot"
+→ Select "architect-copilot-essentials"
+→ Install
+```
+
+### Step 3: Restart Claude Code
+
+**For CLI:**
+```bash
+# Close current session (Ctrl+D), then:
+claude
+```
+
+**For VS Code:**
+```
+Cmd+Shift+P → "Developer: Reload Window"
+```
+
+---
+
+## Alternative: Direct Installation (Manual Method)
+
+> ⚠️ **Warning:** Don't mix marketplace and manual installation! Choose one method to avoid conflicts.
 
 ### Step 1: Clone the Repository
 
@@ -26,17 +60,9 @@ cp agents/adopted/*.md ~/.claude/agents/
 
 ### Step 3: Restart Claude Code
 
-**For CLI:**
-```bash
-# Close current session (Ctrl+D)
-# Start new session
-claude
-```
+**For CLI:** Close session (Ctrl+D) then run `claude`
 
-**For VS Code:**
-```
-Cmd+Shift+P → "Developer: Reload Window"
-```
+**For VS Code:** Cmd+Shift+P → "Developer: Reload Window"
 
 ---
 
@@ -73,9 +99,9 @@ ls -1 ~/.claude/agents/*.md | wc -l
 
 ---
 
-## Future Installation (When Marketplace is Released)
+## Future: CLI Command Installation (Coming Soon)
 
-Once plugin marketplace support is released, you'll be able to use the official installation method:
+Once CLI marketplace commands are released, you'll also be able to use:
 
 ### Step 1: Add the Marketplace
 
@@ -249,13 +275,50 @@ If using Claude Desktop instead of CLI, add to `claude_desktop_config.json`:
 
 ## Troubleshooting
 
+### Install/Uninstall Not Working (IMPORTANT!)
+
+**Problem:** Installing or uninstalling via marketplace doesn't actually change which agents are active.
+
+**Cause:** You have agents in **both** locations:
+- Manual: `~/.claude/agents/*.md`
+- Marketplace: `~/.claude/plugins/marketplaces/*/agents/`
+
+Claude Code loads from both, so marketplace uninstall doesn't remove manually installed agents!
+
+**Solution:**
+```bash
+# Check for manual installs
+ls ~/.claude/agents/
+
+# If you see .md files, CHOOSE ONE METHOD:
+
+# Option A: Use marketplace (recommended)
+mkdir -p ~/backup-agents
+cp ~/.claude/agents/*.md ~/backup-agents/  # Backup first
+rm ~/.claude/agents/*.md                    # Remove manual installs
+
+# Option B: Use manual only
+# Uninstall marketplace via /plugin
+# Then keep using manual installs
+```
+
+After cleanup, marketplace install/uninstall will work correctly!
+
 ### Agents Don't Show Up
 
 1. **Verify installation location:**
+   
+   **For marketplace:**
+   ```bash
+   ls -la ~/.claude/plugins/marketplaces/claude-code-architect-copilot/agents/
+   ```
+   
+   **For manual:**
    ```bash
    ls -la ~/.claude/agents/
    ```
-   Should show 12 .md files
+   
+   Should show 12 .md files total
 
 2. **Check agent format:**
    ```bash

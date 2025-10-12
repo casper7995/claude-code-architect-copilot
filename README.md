@@ -22,9 +22,34 @@ All agents use **Sonnet 4.5** for fast, cost-effective, and high-quality assista
 
 ## 📦 Installation
 
-### Method 1: Direct Installation (Works Now - Both CLI & VS Code)
+### Method 1: Plugin Marketplace (Recommended)
 
-Clone and copy agents to your Claude directory:
+In Claude Code, use the `/plugin` TUI to add and install:
+
+1. **Add the marketplace:**
+   ```
+   /plugin
+   → Select "Add Marketplace"
+   → Enter: casper7995/claude-code-architect-copilot
+   ```
+
+2. **Install the plugin:**
+   ```
+   /plugin
+   → Select "claude-code-architect-copilot"
+   → Select "architect-copilot-essentials"
+   → Install
+   ```
+
+3. **Restart:**
+   - **CLI:** Close and reopen terminal
+   - **VS Code:** Reload window (Cmd+Shift+P → "Developer: Reload Window")
+
+> **Note:** Marketplace feature is available through the `/plugin` TUI. CLI commands (`/plugin marketplace add`) are coming in a future release.
+
+### Method 2: Direct Installation (Alternative)
+
+If you prefer manual installation:
 
 ```bash
 git clone https://github.com/casper7995/claude-code-architect-copilot.git
@@ -34,21 +59,7 @@ cp agents/*.md ~/.claude/agents/
 cp agents/adopted/*.md ~/.claude/agents/
 ```
 
-**Then restart:**
-- **CLI:** Close and reopen terminal
-- **VS Code:** Reload window (Cmd+Shift+P → "Developer: Reload Window")
-
-### Method 2: Plugin Marketplace (Coming Soon)
-
-In Claude Code, run:
-
-```
-/plugin marketplace add casper7995/claude-code-architect-copilot
-/plugin install architect-copilot-essentials
-```
-
-> **Note:** Plugin marketplace announced Oct 9, 2025 in public beta. Not yet available in current stable release (v2.0.14). Check for updates: `claude update`  
-> Direct installation works in both CLI and VS Code extension now.
+⚠️ **Important:** Don't mix marketplace and manual installation. Choose one method to avoid conflicts where uninstalling doesn't work properly.
 
 ### Verification
 
@@ -137,6 +148,26 @@ Installing this plugin gives you **12 specialized agents** that activate automat
 - Vulnerability detection
 - Compliance auditing
 - Multi-perspective code review
+
+---
+
+## 🔧 How It Works
+
+### Marketplace vs Manual Installation
+
+**Marketplace (Recommended):**
+- ✅ Toggle plugins on/off via `/plugin`
+- ✅ Easy updates when new versions release
+- ✅ Install/uninstall actually works
+- ✅ No file management needed
+
+**Manual Installation:**
+- ⚠️ Agents always active (can't toggle)
+- ⚠️ Manual updates required
+- ⚠️ Must delete files to uninstall
+- ⚠️ Conflicts with marketplace if mixed
+
+**Don't mix both methods!** Pick one approach.
 
 ---
 
