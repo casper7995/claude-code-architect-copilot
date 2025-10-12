@@ -1,20 +1,10 @@
 # Installation Guide
 
-## Quick Install (Recommended)
+## Current Installation (v2.0.14)
 
-Install all 12 agents with a single command:
+> **Note:** The `/plugin marketplace` commands are coming in Claude Code v2.1.0+. For now, use direct installation.
 
-```bash
-/plugin install claude-code-architect-copilot@casper7995/claude-code-architect-copilot
-```
-
-Then **restart Claude Code** to activate all agents.
-
----
-
-## Manual Installation (Alternative)
-
-If the plugin install doesn't work, you can manually install agents:
+### Step-by-Step Installation
 
 ### Step 1: Clone the Repository
 
@@ -36,19 +26,31 @@ cp agents/adopted/*.md ~/.claude/agents/
 
 ### Step 3: Restart Claude Code
 
-Close and reopen VS Code (or restart the Claude Code extension).
+**For CLI:**
+```bash
+# Close current session (Ctrl+D)
+# Start new session
+claude
+```
+
+**For VS Code:**
+```
+Cmd+Shift+P → "Developer: Reload Window"
+```
 
 ---
 
 ## Verification
 
-After installation, verify agents are available:
+After installation, agents activate automatically based on conversation context.
 
-```bash
-/subagent
-```
+**Test with these prompts:**
 
-You should see all 12 agents:
+- "Design a Unity Catalog structure" → Databricks Agent activates
+- "Review this code for security" → Code Reviewer activates
+- "Remember this pattern" → Memory Agent activates
+
+**Your 12 installed agents:**
 - best-practices-agent
 - code-reviewer
 - data-scientist
@@ -61,6 +63,31 @@ You should see all 12 agents:
 - ml-agent
 - security-auditor
 - sequential-thinking-agent
+
+### Verify Files Installed
+
+```bash
+ls -1 ~/.claude/agents/*.md | wc -l
+# Should show: 12
+```
+
+---
+
+## Future Installation (v2.1.0+)
+
+Once plugin marketplace support is released, you'll be able to install with:
+
+```bash
+/plugin marketplace add casper7995/claude-code-architect-copilot
+/plugin install architect-copilot-essentials
+```
+
+Your plugin is **already validated and ready** for marketplace distribution:
+```bash
+cd claude-code-architect-copilot
+claude plugin validate .
+# ✔ Validation passed
+```
 
 ---
 
