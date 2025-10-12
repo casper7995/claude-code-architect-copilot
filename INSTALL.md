@@ -144,39 +144,58 @@ Without MCP servers, some agents will have limited functionality:
 
 ### Essential MCP Servers (Strongly Recommended)
 
-| Server | Purpose | Required For |
-|--------|---------|--------------|
-| **memorybank** | Project memory storage | Memory Agent |
-| **context7** | Library documentation lookup | Best Practices Agent |
-| **cipher** | Semantic memory search | Memory Agent |
+| Server | Purpose | Package | Required For |
+|--------|---------|---------|--------------|
+| **memorybank** | Project memory storage | `@movibe/memory-bank-mcp` | Memory Agent |
+| **context7** | Library documentation lookup | `@upstash/context7-mcp` | Best Practices Agent |
+| **cipher** | Semantic memory search | `@byterover/cipher` | Memory Agent |
 
 ### Optional MCP Servers (For Specific Use Cases)
 
-| Server | Purpose | Required For |
-|--------|---------|--------------|
-| **databricks-functions** | Unity Catalog operations | Databricks Agent |
-| **databricks-vector-search** | Vector similarity search | GenAI Agent |
-| **serena** | Code intelligence & analysis | Code Reviewer |
+| Server | Purpose | Package | Required For |
+|--------|---------|---------|--------------|
+| **databricks-functions** | Unity Catalog operations | `@databricks/mcp-server-functions` | Databricks Agent |
+| **databricks-vector-search** | Vector similarity search | `@databricks/mcp-server-vector-search` | GenAI Agent |
+| **serena** | Code intelligence & analysis | `git+https://github.com/oraios/serena` | Code Reviewer |
+| **sequential-thinking** | Structured reasoning | `@modelcontextprotocol/server-sequential-thinking` | Sequential Thinking Agent |
 
 ### How to Install MCP Servers
 
-Add to your `claude_desktop_config.json` (location varies by OS):
-- **Mac:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Linux:** `~/.config/Claude/claude_desktop_config.json`
-- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+**For Claude Code CLI + VS Code Extension (Recommended):**
 
-**Configuration example:**
+Use the built-in `claude mcp` commands:
+
+```bash
+# Add essential MCP servers
+claude mcp add memorybank npx -y @movibe/memory-bank-mcp --mode code
+claude mcp add context7 npx -y @upstash/context7-mcp
+claude mcp add cipher npx -y @byterover/cipher --mode mcp
+
+# Add optional servers
+claude mcp add databricks-functions npx -y @databricks/mcp-server-functions
+claude mcp add sequential-thinking npx -y @modelcontextprotocol/server-sequential-thinking
+
+# Verify installation
+claude mcp list
+```
+
+**For Claude Desktop App (Alternative):**
+
+If using Claude Desktop instead of CLI, add to `claude_desktop_config.json`:
+- **Mac:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Linux:** `~/.config/Claude/claude_desktop_config.json`  
+- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
   "mcpServers": {
     "memorybank": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory-bank"]
+      "args": ["-y", "@movibe/memory-bank-mcp", "--mode", "code"]
     },
     "context7": {
       "command": "npx",
-      "args": ["-y", "@context7/mcp-server"]
+      "args": ["-y", "@upstash/context7-mcp"]
     },
     "cipher": {
       "command": "npx",
@@ -185,6 +204,8 @@ Add to your `claude_desktop_config.json` (location varies by OS):
   }
 }
 ```
+
+> **Note:** Claude Code CLI and VS Code extension share the same MCP configuration. Once added via CLI, servers work in both places.
 
 ---
 
@@ -235,16 +256,40 @@ Add to your `claude_desktop_config.json` (location varies by OS):
 
 ### MCP Servers Not Working
 
-1. **Check configuration file location:**
+**For Claude Code CLI:**
+
+1. **Check installed MCP servers:**
+   ```bash
+   claude mcp list
+   ```
+   Should show all servers with ✓ Connected status
+
+2. **Test specific MCP server:**
+   ```bash
+   npx -y @upstash/context7-mcp
+   ```
+   Should run without errors
+
+3. **Remove and re-add problematic server:**
+   ```bash
+   claude mcp remove memorybank
+   claude mcp add memorybank npx -y @movibe/memory-bank-mcp --mode code
+   ```
+
+4. **Check MCP server logs:**
+   ```bash
+   claude --debug mcp
+   ```
+
+**For Claude Desktop:**
+
+1. **Check configuration file:**
    - Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - Linux: `~/.config/Claude/claude_desktop_config.json`
 
-2. **Verify MCP server installation:**
-   ```bash
-   npx -y @context7/mcp-server --version
-   ```
+2. **Verify JSON syntax:** Use a JSON validator
 
-3. **Restart after adding MCP servers**
+3. **Restart Claude Desktop after changes**
 
 ---
 
