@@ -17,8 +17,12 @@ In Claude Code, run `/plugin` and use the TUI:
 ```
 /plugin
 → Select "claude-code-architect-copilot"
-→ Select "architect-copilot-essentials"
-→ Install
+→ Choose plugins to install:
+   • core-essentials
+   • data-platform
+   • ai-ml-toolkit
+   • development-suite
+→ Install selected
 ```
 
 ### Step 3: Restart Claude Code
@@ -126,7 +130,7 @@ This opens the plugin menu where you can see all available plugins from added ma
 Select and install from the menu, or directly:
 
 ```bash
-/plugin install architect-copilot-essentials
+/plugin install core-essentials@claude-code-architect-copilot
 ```
 
 Then **restart Claude Code** to activate all agents.
@@ -139,11 +143,10 @@ When marketplace is available, you can install individual bundles:
 
 | Bundle | Agents Included | Use Case |
 |--------|----------------|----------|
-| **architect-copilot-essentials** | All 12 agents | Complete setup (recommended) |
-| **databricks-development-suite** | Databricks, Data Scientist, ML | Data platform work |
-| **genai-ml-toolkit** | GenAI, ML, AI Engineer | AI/ML development |
-| **memory-intelligence** | Memory, Best Practices | Context management |
-| **architecture-design-system** | Code Reviewer, Security Auditor, Docs | Architecture & security |
+| **core-essentials** | Memory, Best Practices, Documentation, Sequential Thinking | Core development (recommended for all) |
+| **data-platform** | Databricks | Databricks & Unity Catalog expertise |
+| **ai-ml-toolkit** | GenAI, ML | RAG, vector search, MLflow |
+| **development-suite** | Code Reviewer, Data Scientist, Docs Architect, Deployment Engineer, Security Auditor | Code review, security, deployment |
 
 ---
 
