@@ -1,0 +1,18 @@
+{
+  "name": "development-suite",
+  "tagline": "Code review, security, and deployment specialists",
+  "description": "Expert agents for software development lifecycle: security-focused code review, data analysis, technical documentation, CI/CD deployment, and compliance auditing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Casper",
+    "url": "https://github.com/casper7995"
+  },
+  "agents": [
+    "../../agents/adopted/code-reviewer.md",
+    "../../agents/adopted/data-scientist.md",
+    "../../agents/adopted/docs-architect.md",
+    "../../agents/adopted/deployment-engineer.md",
+    "../../agents/adopted/security-auditor.md"
+  ]
+}
+

@@ -33,12 +33,16 @@ In Claude Code, use the `/plugin` TUI to add and install:
    → Enter: casper7995/claude-code-architect-copilot
    ```
 
-2. **Install the plugin:**
+2. **Install plugins (choose what you need):**
    ```
    /plugin
    → Select "claude-code-architect-copilot"
-   → Select "architect-copilot-essentials"
-   → Install
+   → Choose your plugins:
+      • core-essentials (Memory, Best Practices, Documentation, Sequential Thinking)
+      • data-platform (Databricks & Unity Catalog)
+      • ai-ml-toolkit (GenAI & ML workflows)
+      • development-suite (Code Review, Security, Deployment)
+   → Install selected
    ```
 
 3. **Restart:**
@@ -100,25 +104,52 @@ The plugin installs **agents only**. For full functionality, you also need:
 
 ## 🚀 What's Included
 
-Installing this plugin gives you **12 specialized agents** that activate automatically:
+Four focused plugin bundles with **12 specialized agents** total:
 
-### 🧠 Core Intelligence Agents (4)
-- **Memory Agent** - Smart storage to Memory Bank & Cipher
-- **Best Practices Agent** - Documentation lookup via Context7
-- **Documentation Agent** - Technical writing and generation
-- **Sequential Thinking Agent** - Complex problem-solving
+### 📦 **Plugin Bundles**
 
-### ⚡ Domain Expert Agents (3)
-- **Databricks Agent** - Unity Catalog, Delta Lake, DLT, Spark, MLflow
-- **GenAI Agent** - RAG systems, vector search, LLM applications
-- **ML Agent** - ML pipelines, feature engineering, model deployment
+| Plugin | Agents | Use When |
+|--------|--------|----------|
+| **core-essentials** | 4 agents | Essential for any project |
+| **data-platform** | 1 agent | Working with Databricks |
+| **ai-ml-toolkit** | 2 agents | Building AI/ML features |
+| **development-suite** | 5 agents | Code review & deployment |
 
-### 🔧 Specialist Agents (5)
-- **Data Scientist** - SQL, exploratory analysis, statistical insights
-- **Code Reviewer** - Security-focused code analysis
-- **Docs Architect** - Long-form technical documentation
-- **Deployment Engineer** - CI/CD, Kubernetes, cloud deployment
-- **Security Auditor** - OWASP, SOC2, HIPAA compliance
+**Install only what you need!** Mix and match based on your project.
+
+---
+
+### 📦 **core-essentials** (Essential - Install First)
+
+| Agent | Purpose | Keywords |
+|-------|---------|----------|
+| **Memory Agent** | Smart storage to Memory Bank & Cipher | "remember this", "store decision" |
+| **Best Practices Agent** | Up-to-date docs via Context7 | "best practice", "how to" |
+| **Documentation Agent** | Technical writing & generation | "document this", "write docs" |
+| **Sequential Thinking Agent** | Complex problem-solving | "think through", "analyze" |
+
+### ⚡ **data-platform** (For Databricks Users)
+
+| Agent | Purpose | Keywords |
+|-------|---------|----------|
+| **Databricks Agent** | Unity Catalog, Delta Lake, DLT, Spark, MLflow | "databricks", "unity catalog", "delta lake" |
+
+### 🤖 **ai-ml-toolkit** (For AI/ML Development)
+
+| Agent | Purpose | Keywords |
+|-------|---------|----------|
+| **GenAI Agent** | RAG systems, vector search, LLM apps | "rag", "vector search", "genai" |
+| **ML Agent** | ML pipelines, feature engineering, deployment | "machine learning", "mlflow", "feature" |
+
+### 🔧 **development-suite** (For Code Quality & Deployment)
+
+| Agent | Purpose | Keywords |
+|-------|---------|----------|
+| **Code Reviewer** | Security-focused code analysis | "review this code", "security check" |
+| **Data Scientist** | SQL, exploratory analysis, statistics | "analyze data", "sql query" |
+| **Docs Architect** | Long-form technical documentation | "architecture doc", "system design doc" |
+| **Deployment Engineer** | CI/CD, Kubernetes, cloud deployment | "deploy", "kubernetes", "ci/cd" |
+| **Security Auditor** | OWASP, SOC2, HIPAA compliance | "security audit", "compliance", "owasp" |
 
 ### 🎯 Key Features
 
@@ -304,16 +335,20 @@ To use all features, configure these MCP servers in your Claude Code settings:
 - `sequential-thinking` - Advanced reasoning
 - `fetch` - Web content retrieval
 
-## 🎯 When to Use Each Plugin
+## 🎯 Plugin Selection Guide
 
-| Task | Plugin | Agents |
-|------|--------|--------|
-| New project setup | Architect Copilot Essentials | Memory, Best Practices, Documentation |
-| Databricks development | Databricks Development Suite | Databricks, Data Scientist |
-| ML/AI features | GenAI & ML Toolkit | GenAI, ML, AI Engineer, ML Engineer |
-| Context retention | Memory Intelligence | Memory Agent, Cipher |
-| Code review & security | Architecture Design System | Code Reviewer, Security Auditor |
-| Documentation | Essentials or Architecture Design | Documentation, Docs Architect |
+| Your Use Case | Install These Plugins | Why |
+|---------------|----------------------|-----|
+| **Any project** | `core-essentials` | Essential for memory, best practices, docs |
+| **Databricks dev** | `core-essentials` + `data-platform` | Unity Catalog & Delta Lake expertise |
+| **AI/ML projects** | `core-essentials` + `ai-ml-toolkit` | RAG, vector search, MLflow |
+| **Full-stack development** | `core-essentials` + `development-suite` | Code review, security, deployment |
+| **Data platform + AI** | All except `development-suite` | Complete data & AI workflow |
+| **Everything** | All 4 plugins | Full 12-agent suite |
+
+**💡 Tip:** Start with `core-essentials` only, add others as needed!
+
+---
 
 ## 💡 Smart Storage (Memory Agent)
 

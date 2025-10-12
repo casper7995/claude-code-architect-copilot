@@ -1,0 +1,14 @@
+{
+  "name": "data-platform",
+  "tagline": "Databricks and Unity Catalog expertise",
+  "description": "Expert agent for Databricks platform: Unity Catalog governance, Delta Lake operations, DLT patterns, Spark optimization, and MLflow integration.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Casper",
+    "url": "https://github.com/casper7995"
+  },
+  "agents": [
+    "../../agents/databricks-agent.md"
+  ]
+}
+

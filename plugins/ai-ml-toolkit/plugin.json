@@ -1,0 +1,15 @@
+{
+  "name": "ai-ml-toolkit",
+  "tagline": "GenAI and ML workflow specialists",
+  "description": "Expert agents for AI/ML development: RAG systems, vector search, model training, feature engineering, MLflow, and model deployment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Casper",
+    "url": "https://github.com/casper7995"
+  },
+  "agents": [
+    "../../agents/genai-agent.md",
+    "../../agents/ml-agent.md"
+  ]
+}
+

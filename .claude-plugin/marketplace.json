@@ -10,10 +10,10 @@
   },
   "plugins": [
     {
-      "name": "architect-copilot-essentials",
-      "source": "./",
-      "tagline": "Essential agents for architecture-first development with intelligent memory",
-      "description": "Core agents for architecture-first development with intelligent memory management (Memory Bank + Cipher), automatic documentation generation, up-to-date best practices lookup via Context7, and structured reasoning for complex decisions.",
+      "name": "core-essentials",
+      "source": "./plugins/core-essentials",
+      "tagline": "Core agents for architecture-first development",
+      "description": "Essential agents: Memory Bank integration, Context7 best practices lookup, automatic documentation generation, and structured reasoning for complex decisions.",
       "version": "1.0.0",
       "author": {
         "name": "Casper",
@@ -22,14 +22,56 @@
       "homepage": "https://github.com/casper7995/claude-code-architect-copilot",
       "repository": "https://github.com/casper7995/claude-code-architect-copilot",
       "license": "MIT",
-      "keywords": [
-        "architecture",
-        "memory-bank",
-        "documentation",
-        "best-practices"
-      ],
+      "keywords": ["architecture", "memory-bank", "documentation", "best-practices"],
       "category": "essentials"
+    },
+    {
+      "name": "data-platform",
+      "source": "./plugins/data-platform",
+      "tagline": "Databricks and Unity Catalog expertise",
+      "description": "Expert agent for Databricks platform: Unity Catalog governance, Delta Lake operations, DLT patterns, Spark optimization, and MLflow integration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Casper",
+        "url": "https://github.com/casper7995"
+      },
+      "homepage": "https://github.com/casper7995/claude-code-architect-copilot",
+      "repository": "https://github.com/casper7995/claude-code-architect-copilot",
+      "license": "MIT",
+      "keywords": ["databricks", "unity-catalog", "delta-lake", "spark"],
+      "category": "development"
+    },
+    {
+      "name": "ai-ml-toolkit",
+      "source": "./plugins/ai-ml-toolkit",
+      "tagline": "GenAI and ML workflow specialists",
+      "description": "Expert agents for AI/ML development: RAG systems, vector search, model training, feature engineering, MLflow, and model deployment.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Casper",
+        "url": "https://github.com/casper7995"
+      },
+      "homepage": "https://github.com/casper7995/claude-code-architect-copilot",
+      "repository": "https://github.com/casper7995/claude-code-architect-copilot",
+      "license": "MIT",
+      "keywords": ["genai", "machine-learning", "rag", "vector-search", "mlflow"],
+      "category": "development"
+    },
+    {
+      "name": "development-suite",
+      "source": "./plugins/development-suite",
+      "tagline": "Code review, security, and deployment specialists",
+      "description": "Expert agents for software development lifecycle: security-focused code review, data analysis, technical documentation, CI/CD deployment, and compliance auditing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Casper",
+        "url": "https://github.com/casper7995"
+      },
+      "homepage": "https://github.com/casper7995/claude-code-architect-copilot",
+      "repository": "https://github.com/casper7995/claude-code-architect-copilot",
+      "license": "MIT",
+      "keywords": ["code-review", "security", "deployment", "devops", "compliance"],
+      "category": "productivity"
     }
   ]
 }
-
