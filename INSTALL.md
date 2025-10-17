@@ -276,6 +276,42 @@ If using Claude Desktop instead of CLI, add to `claude_desktop_config.json`:
 
 ---
 
+## Skills vs Agents
+
+### What are Skills?
+
+**Skills** provide deep technical reference knowledge that complements agents:
+
+- **Agents**: AI personas that orchestrate workflows and solve problems
+- **Skills**: Technical knowledge bases with code patterns and best practices
+- **Relationship**: Agents invoke Skills for specific technical guidance
+
+### Available Skills
+
+| Skill | Location | Purpose |
+|-------|----------|---------|
+| **databricks-pyspark-delta** | `data-platform` plugin | Databricks patterns, Delta Lake, PySpark |
+| **python-ml-datascience** | `ai-ml-toolkit` plugin | ML workflows, data science patterns |
+| **mlflow-deployment** | `ai-ml-toolkit` plugin | ML operations, model deployment |
+
+### How Skills Work
+
+1. **Automatic Discovery**: Skills are automatically available when you install plugins
+2. **Model-Invoked**: Claude decides when to use Skills based on context
+3. **Complementary**: Databricks Agent + databricks-pyspark-delta Skill work together
+
+### Verifying Skills
+
+Skills are loaded automatically with plugins. Test them by asking technical questions:
+
+```
+"Show me Delta Lake MERGE patterns"  # Uses databricks-pyspark-delta skill
+"How do I evaluate ML models?"       # Uses python-ml-datascience skill
+"MLflow deployment best practices"   # Uses mlflow-deployment skill
+```
+
+---
+
 ## Troubleshooting
 
 ### Install/Uninstall Not Working (IMPORTANT!)

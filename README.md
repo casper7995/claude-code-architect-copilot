@@ -105,7 +105,7 @@ The plugin installs **agents only**. For full functionality, you also need:
 
 ## 🚀 What's Included
 
-Four focused plugin bundles with **12 specialized agents** total:
+Four focused plugin bundles with **12 specialized agents** and **3 technical skills** total:
 
 ### 📦 **Plugin Bundles**
 
@@ -117,6 +117,16 @@ Four focused plugin bundles with **12 specialized agents** total:
 | **development-suite** | 5 agents | Code review & deployment |
 
 **Install only what you need!** Mix and match based on your project.
+
+### 🎯 **Technical Skills** (Deep Reference Knowledge)
+
+| Skill | Purpose | When to Use |
+|-------|---------|-------------|
+| **databricks-pyspark-delta** | Databricks patterns & Delta Lake | PySpark development, data pipelines |
+| **python-ml-datascience** | ML workflows & data science | Building models, data analysis |
+| **mlflow-deployment** | ML operations & deployment | Model tracking, production deployment |
+
+**Skills complement agents** - Agents provide workflow orchestration, Skills provide technical reference patterns.
 
 ---
 
