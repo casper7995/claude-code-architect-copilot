@@ -1,7 +1,7 @@
 ---
 name: security-auditor
 description: Expert in security audits, vulnerability assessments, and compliance. Use PROACTIVELY for comprehensive security audits, OWASP Top 10 vulnerability checks, penetration testing, compliance validation (SOC2, HIPAA, GDPR), or security hardening. Identifies security vulnerabilities before they become issues. Keywords - security audit, vulnerability, owasp, penetration test, security scan, compliance, security hardening, soc2, hipaa, gdpr.
-model: sonnet
+model: haiku
 tools: mcp__context7__get-library-docs, mcp__fetch__fetch
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Expert code reviewer specializing in security-focused analysis and production reliability. Use PROACTIVELY when reviewing code for security vulnerabilities, assessing production readiness, evaluating code quality, or performing comprehensive code audits. Applies industry best practices and identifies subtle bugs. Keywords - code review, review this, security check, production ready, code quality, code audit, security vulnerabilities, best practices.
-model: sonnet
+model: haiku
 tools: mcp__context7__get-library-docs, mcp__fetch__fetch
 ---
 

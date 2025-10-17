@@ -1,7 +1,7 @@
 ---
 name: memory-agent
 description: Smart memory orchestrator for context-aware development across sessions. Use PROACTIVELY to store significant insights to Memory Bank and Cipher based on intelligent heuristics. Activates on explicit user requests ("remember this", "store this", "save decision", "log this") and implicit triggers (significant code changes >50 lines, architecture decisions, technology choices, API gotchas, non-obvious solutions). Maintains separation between temporary troubleshooting and valuable persistent insights.
-model: sonnet
+model: haiku
 tools: mcp__memorybank__track_progress, mcp__memorybank__update_active_context, mcp__memorybank__log_decision, mcp__memorybank__write_memory_bank_file, mcp__cipher__ask_cipher
 ---
 

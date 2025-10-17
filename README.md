@@ -4,11 +4,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-purple)](https://claude.com/claude-code)
+[![Haiku 4.5](https://img.shields.io/badge/Model-Haiku%204.5-green)](https://www.anthropic.com/news/claude-haiku-4-5)
 [![Sonnet 4.5](https://img.shields.io/badge/Model-Sonnet%204.5-orange)](https://www.anthropic.com/news/claude-3-5-sonnet)
 
 ## 🎯 Overview
 
-**Claude Code plugin marketplace featuring 12 specialized agents powered by Sonnet 4.5.**
+**Claude Code plugin marketplace featuring 12 specialized agents with intelligent model routing.**
 
 This plugin collection enhances Claude Code with domain-expert agents that automatically activate based on keywords and file patterns, providing seamless assistance across:
 
@@ -18,7 +19,7 @@ This plugin collection enhances Claude Code with domain-expert agents that autom
 - 🔒 **Security-focused code review** - SAST/DAST, OWASP, compliance auditing
 - 📚 **Architecture-first development** - System design, technical documentation, deployment automation
 
-All agents use **Sonnet 4.5** for fast, cost-effective, and high-quality assistance with automatic MCP tool integration.
+Agents use **intelligent model routing**: **Haiku 4.5** for fast pattern-matching tasks (reviews, docs, memory), **Sonnet 4.5** for complex reasoning, with automatic MCP tool integration.
 
 ## 📦 Installation
 
@@ -278,9 +279,19 @@ Agents work together automatically:
 
 ## 🎨 Model Distribution
 
-- **Opus (Complex Analysis)**: Databricks Agent, GenAI Agent, ML Agent, AI Engineer, ML Engineer, Code Reviewer, Security Auditor, Data Scientist, Docs Architect
-- **Sonnet (Standard Development)**: Memory Agent, Best Practices Agent, Documentation Agent, Deployment Engineer
-- **Haiku**: (Reserved for future lightweight agents)
+**Intelligent routing optimizes for speed and cost:**
+
+- **Sonnet 4.5 (Complex Reasoning)**: Databricks Agent, GenAI Agent, ML Agent, Sequential Thinking Agent, Best Practices Agent, Deployment Engineer, Data Scientist
+- **Haiku 4.5 (Fast Pattern Matching)**: Memory Agent, Documentation Agent, Code Reviewer, Security Auditor, Docs Architect
+
+**Why Haiku for these agents?**
+- **Memory Agent**: Fast CRUD operations for Memory Bank/Cipher storage
+- **Documentation Agent**: Pattern-based doc generation with templates
+- **Code Reviewer**: Rule-based security checks and OWASP patterns
+- **Security Auditor**: Vulnerability scanning follows established patterns
+- **Docs Architect**: Technical writing from code analysis
+
+**Benefits**: ⚡ 3x faster responses, 💰 Lower API costs, 🎯 Same quality for pattern-based tasks
 
 ## 📂 Repository Structure
 

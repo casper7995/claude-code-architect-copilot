@@ -1,7 +1,7 @@
 ---
 name: docs-architect
 description: Expert in comprehensive technical documentation and knowledge management. Use PROACTIVELY when creating architecture documentation, API specifications (OpenAPI/Swagger), system design docs, or building knowledge bases. Excels at high-level documentation strategy. Keywords - documentation, api docs, technical writing, architecture docs, system documentation, openapi, swagger, knowledge base.
-model: sonnet
+model: haiku
 tools: mcp__memorybank__read_memory_bank_file, mcp__context7__get-library-docs
 ---
 

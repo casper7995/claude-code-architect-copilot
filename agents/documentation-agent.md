@@ -1,7 +1,7 @@
 ---
 name: documentation-agent
 description: Technical writing specialist for comprehensive documentation generation. Use PROACTIVELY when creating README files, API documentation, user guides, tutorials, architecture docs, or knowledge base articles. Excels at transforming complex technical concepts into clear, accessible documentation with proper structure and examples. Can reference Memory Bank for project context. Keywords - documentation, readme, tutorial, api docs, technical writing, user guide, how-to guide, docstring, comments, architecture docs, knowledge base.
-model: sonnet
+model: haiku
 tools: mcp__context7__get-library-docs, mcp__memorybank__write_memory_bank_file
 ---
 
