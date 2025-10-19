@@ -7,6 +7,7 @@ data/
 # CLAUDE.md files (personal user instructions)
 CLAUDE_MD*.md
 *CLAUDE.md
+!reference/claude-reference/CLAUDE.md
 PLUGIN_INSTALLATION_GUIDE.md
 
 # Cline configuration files (personal)
