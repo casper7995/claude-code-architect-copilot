@@ -6,5 +6,22 @@
   "author": {
     "name": "Casper",
     "url": "https://github.com/casper7995"
-  }
+  },
+  "agents": [
+    "code-reviewer.md",
+    "data-scientist.md",
+    "deployment-engineer.md",
+    "docs-architect.md",
+    "security-auditor.md"
+  ],
+  "commands": [
+    "commit.md",
+    "commit-push-pr.md",
+    "review-pr.md"
+  ],
+  "skills": [
+    "api-development/SKILL.md",
+    "python-testing/SKILL.md"
+  ]
 }
+

@@ -15,8 +15,12 @@ PLUGIN_INSTALLATION_GUIDE.md
 # Personal Claude directory
 .claude/
 
+# Reference directory (synced from ~/.claude, safe to commit)
+# reference/claude-reference/
+
 # Temporary/development scripts
 install.sh
+sync-claude-reference.sh
 
 # macOS
 .DS_Store

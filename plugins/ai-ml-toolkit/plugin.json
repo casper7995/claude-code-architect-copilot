@@ -6,5 +6,14 @@
   "author": {
     "name": "Casper",
     "url": "https://github.com/casper7995"
-  }
+  },
+  "agents": [
+    "genai-agent.md",
+    "ml-agent.md"
+  ],
+  "skills": [
+    "mlflow-deployment/SKILL.md",
+    "python-ml-datascience/SKILL.md"
+  ]
 }
+

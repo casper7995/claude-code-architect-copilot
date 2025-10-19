@@ -105,16 +105,16 @@ The plugin installs **agents only**. For full functionality, you also need:
 
 ## 🚀 What's Included
 
-Four focused plugin bundles with **12 specialized agents** and **3 technical skills** total:
+Four focused plugin bundles with **12 specialized agents**, **3 technical skills**, and **4 workflow commands**:
 
 ### 📦 **Plugin Bundles**
 
-| Plugin | Agents | Use When |
-|--------|--------|----------|
-| **core-essentials** | 4 agents | Essential for any project |
-| **data-platform** | 1 agent | Working with Databricks |
-| **ai-ml-toolkit** | 2 agents | Building AI/ML features |
-| **development-suite** | 5 agents | Code review & deployment |
+| Plugin | Agents | Commands | Use When |
+|--------|--------|----------|----------|
+| **core-essentials** | 4 agents | 1 command | Essential for any project |
+| **data-platform** | 1 agent | - | Working with Databricks |
+| **ai-ml-toolkit** | 2 agents | - | Building AI/ML features |
+| **development-suite** | 5 agents | 3 commands | Code review & deployment |
 
 **Install only what you need!** Mix and match based on your project.
 
@@ -127,6 +127,17 @@ Four focused plugin bundles with **12 specialized agents** and **3 technical ski
 | **mlflow-deployment** | ML operations & deployment | Model tracking, production deployment |
 
 **Skills complement agents** - Agents provide workflow orchestration, Skills provide technical reference patterns.
+
+### ⚡ **Workflow Commands** (Slash Commands)
+
+| Command | Plugin | Purpose |
+|---------|--------|---------|
+| **/feature-dev** | core-essentials | Guided feature development with architecture-first approach |
+| **/commit** | development-suite | Create a git commit with smart message generation |
+| **/commit-push-pr** | development-suite | Commit, push, and create PR in one workflow |
+| **/review-pr** | development-suite | Comprehensive PR review using specialized agents |
+
+**Commands automate workflows** - Run multi-step processes with a single slash command.
 
 ---
 
@@ -307,35 +318,65 @@ Agents work together automatically:
 
 ```
 claude-code-architect-copilot/
-├── .claude-plugin/
-│   └── marketplace.json       # Plugin catalog
-├── plugin.json                # Plugin manifest
-├── agents/
-│   ├── memory-agent.md        # Smart storage orchestration
-│   ├── databricks-agent.md    # Databricks platform expert
-│   ├── genai-agent.md         # RAG and vector search
-│   ├── ml-agent.md            # ML pipelines and MLflow
-│   ├── best-practices-agent.md
-│   ├── documentation-agent.md
-│   ├── sequential-thinking-agent.md
-│   └── adopted/               # Community agents
-│       ├── code-reviewer.md
-│       ├── data-scientist.md
-│       ├── docs-architect.md
-│       ├── deployment-engineer.md
-│       └── security-auditor.md
-├── archive/                   # Archived documentation
-├── memory-bank/               # Example structure (user-specific, not distributed)
-│   ├── product-context.md
-│   ├── active-context.md
-│   ├── system-patterns.md
-│   ├── decision-log.md
-│   └── progress.md
+├── plugin.json                  # Main plugin manifest
+├── plugins/                     # Plugin bundles
+│   ├── core-essentials/
+│   │   ├── plugin.json          # Plugin metadata
+│   │   ├── agents/              # 4 essential agents
+│   │   ├── commands/
+│   │   │   └── feature-dev.md   # Architecture-first development
+│   │   └── skills/              # Technical reference patterns
+│   ├── data-platform/
+│   │   ├── plugin.json
+│   │   ├── agents/              # Databricks agent
+│   │   └── skills/              # Databricks/PySpark patterns
+│   ├── ai-ml-toolkit/
+│   │   ├── plugin.json
+│   │   ├── agents/              # GenAI & ML agents
+│   │   └── skills/              # ML/data science patterns
+│   └── development-suite/
+│       ├── plugin.json
+│       ├── agents/              # 5 development agents
+│       ├── commands/            # Workflow commands
+│       │   ├── commit.md        # Smart commit workflow
+│       │   ├── commit-push-pr.md # Full PR workflow
+│       │   └── review-pr.md     # Multi-agent PR review
+│       └── skills/              # API & testing patterns
+├── agents/                      # Legacy - kept for direct install
+├── commands/                    # Legacy - kept for direct install
+├── reference/                   # Reference structure from ~/.claude
+│   └── claude-reference/        # Synced setup example (safe for GitHub)
+│       ├── agents/              # Installed agents
+│       ├── commands/            # Installed commands
+│       ├── skills/              # Installed skills
+│       ├── CLAUDE.md            # Configuration file
+│       └── settings.example.json # Settings template
 ├── README.md
 └── LICENSE
 ```
 
 > **Note:** The `memory-bank/` directory shown here is an example structure for reference. Each user will have their own Memory Bank managed by the Memory Bank MCP server in their local environment.
+
+## 📋 Reference Structure
+
+The `reference/claude-reference/` directory contains a sanitized snapshot of a working `~/.claude` setup. This serves as:
+
+- **Setup Guide**: Shows how agents, commands, and skills are organized after installation
+- **Example Configuration**: Demonstrates proper file structure and naming conventions  
+- **Troubleshooting Reference**: Helps diagnose installation or configuration issues
+
+**What's Included:**
+- ✅ Installed agents, commands, and skills
+- ✅ Example configuration files (sanitized)
+- ✅ Directory structure and organization
+
+**What's Excluded (Sensitive):**
+- ❌ API keys and credentials
+- ❌ Personal conversation history
+- ❌ Debug logs and temporary files
+- ❌ Project-specific data
+
+This reference is automatically synced from the maintainer's setup and is safe to commit to GitHub.
 
 ## 🔧 Configuration
 

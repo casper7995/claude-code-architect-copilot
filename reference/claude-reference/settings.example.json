@@ -1,0 +1,10 @@
+{
+  "model": "claude-3-5-sonnet-20241022",
+  "maxTokens": 4096,
+  "temperature": 0.1,
+  "systemPrompt": "You are a helpful AI assistant...",
+  "plugins": {
+    "enabled": true,
+    "marketplace": "https://github.com/casper7995/claude-code-architect-copilot"
+  }
+}
